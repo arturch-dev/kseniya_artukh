@@ -39,10 +39,10 @@
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
-<body class="bg-stone-50 text-gray-800 font-sans antialiased">
+<body class="bg-stone-50 text-gray-800 font-sans antialiased pb-24"> <!-- Додав pb-24 щоб контент не ховався за плаваючою кнопкою в самому низу -->
 
-    <!-- Блок 1: Hero (ТЕПЕР НА ВЕСЬ ЕКРАН: min-h-[100dvh]) -->
-    <section class="relative min-h-[100dvh] flex items-center justify-center bg-cover bg-center bg-no-repeat" style="background-image: url('hero.JPEG');">
+    <!-- Блок 1: Hero -->
+    <section class="relative min-h-[100dvh] sm:min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" style="background-image: url('hero.JPEG');">
         <!-- Overlay для читабельності тексту -->
         <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/80"></div>
         
@@ -127,7 +127,7 @@
         </div>
     </section>
 
-    <!-- Блок 4: До/Після (ТЕПЕР КАРУСЕЛЬ) -->
+    <!-- Блок 4: До/Після -->
     <section class="py-16 px-4 bg-white text-center overflow-hidden">
         <div class="max-w-5xl mx-auto">
             <h2 class="text-3xl font-bold mb-10 text-stone-800">Результати моїх клієнтів</h2>
@@ -145,6 +145,13 @@
             </button>
         </div>
     </section>
+
+    <!-- ПЛАВАЮЧА КНОПКА -->
+    <div class="fixed bottom-6 left-0 right-0 z-40 flex justify-center px-4 pointer-events-none">
+        <button onclick="openModal()" class="pointer-events-auto w-full md:w-auto md:min-w-[300px] bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-[0_10px_25px_rgba(16,185,129,0.6)] border border-emerald-400 transition-all transform hover:scale-105">
+            Дивитися безкоштовний урок
+        </button>
+    </div>
 
     <!-- ПОПАП ФОРМА -->
     <div id="leadModal" class="fixed inset-0 z-50 hidden flex items-center justify-center px-4 backdrop-blur-sm bg-black/70 transition-opacity duration-300 opacity-0">
