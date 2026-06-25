@@ -8,13 +8,10 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Intl-Tel-Input CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/css/intlTelInput.css">
-    
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Meta Pixel Code (ЗАГЛУШКА) -->
+    <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -24,13 +21,12 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1202494590376833'); /* ВСТАВ СВІЙ ПІКСЕЛЬ ТУТ */
+    fbq('init', '1202494590376833'); /* ТУТ ВАШ ПІКСЕЛЬ */
     fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1202494590376833&ev=PageView&noscript=1"/></noscript>
 
     <style>
-        .iti { width: 100%; }
         /* Smooth scrolling */
         html { scroll-behavior: smooth; }
         
@@ -40,6 +36,8 @@
     </style>
 </head>
 <body class="bg-stone-50 text-gray-800 font-sans antialiased pb-24">
+
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1202494590376833&ev=PageView&noscript=1"/></noscript>
 
     <!-- Блок 1: Hero -->
     <section class="relative min-h-[100dvh] sm:min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" style="background-image: url('hero.JPEG');">
@@ -53,7 +51,8 @@
             <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-3xl mx-auto">
                 Дізнайся систему, яка дає реальні результати в 95% випадках: рівна осанка, чіткий овал обличчя і відчуття, що тіло знову “твоє” — без перевантаження і жорстких підходів.
             </p>
-            <button onclick="openModal()" class="w-full md:w-auto bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-[0_0_20px_rgba(249,115,22,0.4)] transition-all transform hover:scale-105">
+            <button onclick="goToBot()" class="w-full md:w-auto bg-[#0088cc] hover:bg-[#0077b5] text-white font-bold py-4 px-8 rounded-full text-lg shadow-[0_0_20px_rgba(0,136,204,0.4)] transition-all transform hover:scale-105 flex items-center justify-center gap-2 mx-auto">
+                <i data-lucide="send" class="w-5 h-5"></i>
                 Дивитися безкоштовний урок
             </button>
         </div>
@@ -127,21 +126,21 @@
         </div>
     </section>
 
-    <!-- Блок 4: До/Після (ВИПРАВЛЕНО РОЗМІРИ ФОТО) -->
+    <!-- Блок 4: До/Після -->
     <section class="py-16 px-4 bg-white text-center overflow-hidden">
         <div class="max-w-5xl mx-auto">
             <h2 class="text-3xl font-bold mb-10 text-stone-800">Результати моїх клієнтів</h2>
             
             <!-- Слайдер-карусель -->
             <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 mb-12 pb-6 hide-scrollbar px-2 items-center">
-                <!-- Змінено object-cover на object-contain та додано h-auto -->
-                <img src="f1.jpg" loading="lazy" alt="До/Після 1" class="w-[85%] sm:w-[48%] lg:w-[45%] h-auto flex-shrink-0 snap-center rounded-xl shadow-md object-contain">
-                <img src="f2.jpg" loading="lazy" alt="До/Після 2" class="w-[85%] sm:w-[48%] lg:w-[45%] h-auto flex-shrink-0 snap-center rounded-xl shadow-md object-contain">
-                <img src="f3.jpg" loading="lazy" alt="До/Після 3" class="w-[85%] sm:w-[48%] lg:w-[45%] h-auto flex-shrink-0 snap-center rounded-xl shadow-md object-contain">
-                <img src="f4.jpg" loading="lazy" alt="До/Після 4" class="w-[85%] sm:w-[48%] lg:w-[45%] h-auto flex-shrink-0 snap-center rounded-xl shadow-md object-contain">
+                <img src="feedback1.jpg" loading="lazy" alt="До/Після 1" class="w-[85%] sm:w-[48%] lg:w-[45%] h-auto flex-shrink-0 snap-center rounded-xl shadow-md object-contain">
+                <img src="feedback2.jpg" loading="lazy" alt="До/Після 2" class="w-[85%] sm:w-[48%] lg:w-[45%] h-auto flex-shrink-0 snap-center rounded-xl shadow-md object-contain">
+                <img src="feedback3.jpg" loading="lazy" alt="До/Після 3" class="w-[85%] sm:w-[48%] lg:w-[45%] h-auto flex-shrink-0 snap-center rounded-xl shadow-md object-contain">
+                <img src="feedback4.jpg" loading="lazy" alt="До/Після 4" class="w-[85%] sm:w-[48%] lg:w-[45%] h-auto flex-shrink-0 snap-center rounded-xl shadow-md object-contain">
             </div>
 
-            <button onclick="openModal()" class="w-full md:w-auto bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-10 rounded-full text-xl shadow-[0_0_20px_rgba(249,115,22,0.4)] transition-all transform hover:scale-105 animate-bounce">
+            <button onclick="goToBot()" class="w-full md:w-auto bg-[#0088cc] hover:bg-[#0077b5] text-white font-bold py-4 px-10 rounded-full text-xl shadow-[0_0_20px_rgba(0,136,204,0.4)] transition-all transform hover:scale-105 animate-bounce flex items-center justify-center gap-2 mx-auto">
+                <i data-lucide="send" class="w-5 h-5"></i>
                 Дивитися безкоштовний урок
             </button>
         </div>
@@ -149,215 +148,37 @@
 
     <!-- ПЛАВАЮЧА КНОПКА (Прихована за замовчуванням) -->
     <div id="floatingBtn" class="fixed bottom-6 left-0 right-0 z-40 flex justify-center px-4 pointer-events-none opacity-0 translate-y-10 invisible transition-all duration-300">
-        <button onclick="openModal()" class="pointer-events-auto w-full md:w-auto md:min-w-[300px] bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-[0_10px_25px_rgba(249,115,22,0.6)] border border-orange-400 transition-all transform hover:scale-105">
+        <button onclick="goToBot()" class="pointer-events-auto w-full md:w-auto md:min-w-[300px] bg-[#0088cc] hover:bg-[#0077b5] text-white font-bold py-4 px-8 rounded-full text-lg shadow-[0_10px_25px_rgba(0,136,204,0.6)] border border-[#0088cc]/50 transition-all transform hover:scale-105 flex items-center justify-center gap-2">
+            <i data-lucide="send" class="w-5 h-5"></i>
             Дивитися безкоштовний урок
         </button>
     </div>
 
-    <!-- ПОПАП ФОРМА -->
-    <div id="leadModal" class="fixed inset-0 z-50 hidden flex items-center justify-center px-4 backdrop-blur-sm bg-black/70 transition-opacity duration-300 opacity-0">
-        <div class="bg-white rounded-3xl p-8 w-full max-w-md relative transform scale-95 transition-transform duration-300" id="modalContent">
-            <!-- Кнопка закриття -->
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700">
-                <i data-lucide="x" class="w-6 h-6"></i>
-            </button>
-            
-            <h3 class="text-2xl font-bold text-center mb-2 text-stone-800">Отримати доступ до уроку</h3>
-            <p class="text-gray-500 text-center mb-6 text-sm">Заповніть форму нижче, щоб перейти до перегляду</p>
-            
-            <form id="leadForm" class="space-y-4">
-                <!-- Ім'я -->
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Ваше ім'я</label>
-                    <input type="text" id="userName" required placeholder="Напр. Олена" 
-                           class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition">
-                    <p id="nameError" class="text-red-500 text-xs mt-1 hidden">Ім'я не може містити цифри.</p>
-                </div>
-                
-                <!-- Телефон -->
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Номер телефону</label>
-                    <input type="tel" id="userPhone" required 
-                           class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition">
-                    <p id="phoneError" class="text-red-500 text-xs mt-1 hidden">Невірний формат номера.</p>
-                </div>
-
-                <!-- Нік Телеграм -->
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Ваш нік в Telegram (або номер)</label>
-                    <div class="relative">
-                        <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-500">@</span>
-                        <input type="text" id="userTelegram" required placeholder="username" 
-                               class="w-full pl-8 pr-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition">
-                    </div>
-                </div>
-
-                <!-- Кнопка -->
-                <button type="submit" id="submitBtn" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 rounded-xl mt-4 transition-all flex justify-center items-center">
-                    <span id="btnText">ОТРИМАТИ ДОСТУП</span>
-                    <i data-lucide="loader-2" id="btnLoader" class="animate-spin hidden w-5 h-5 ml-2"></i>
-                </button>
-            </form>
-            <p class="text-xs text-center text-gray-400 mt-4">Ваші дані в безпеці.</p>
-        </div>
-    </div>
-
     <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/intlTelInput.min.js"></script>
-    
     <script>
         // Ініціалізація іконок
         lucide.createIcons();
 
-        // КОНФІГ: Встав сюди URL свого Google Web App Script
-        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyymnvmlcS76twOS5WxVduadNTM2AYriYrDu_rWF2NrE44eKMXRRWScDbEwR-2mSgNo/exec'; 
+        // Посилання на бот Telegram
+        const TG_BOT_URL = 'https://t.me/KseniyaArtukh_bot?start=6a1dcea01f04540da40da3cb'; 
 
-        // Логіка Попапу
-        const modal = document.getElementById('leadModal');
-        const modalContent = document.getElementById('modalContent');
-        
-        function openModal() {
-            modal.classList.remove('hidden');
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-                modalContent.classList.remove('scale-95');
-                modalContent.classList.add('scale-100');
-            }, 10);
-            
-            // FB Pixel InitiateCheckout
-            if(typeof fbq !== 'undefined') {
-                fbq('track', 'InitiateCheckout');
+        // Перехід на бота та фіксація ліда в Pixel
+        function goToBot() {
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead');
             }
+            window.location.href = TG_BOT_URL;
         }
-        
-        function closeModal() {
-            modal.classList.add('opacity-0');
-            modalContent.classList.remove('scale-100');
-            modalContent.classList.add('scale-95');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-            }, 300);
-        }
-
-        // Закриття по кліку поза попапом
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) closeModal();
-        });
 
         // Логіка появи плаваючої кнопки при скролі
         const floatingBtn = document.getElementById('floatingBtn');
         window.addEventListener('scroll', () => {
-            // Кнопка з'являється, коли користувач прокрутив 80% висоти екрану (пройшов перший блок)
             if (window.scrollY > window.innerHeight * 0.8) {
                 floatingBtn.classList.remove('opacity-0', 'translate-y-10', 'invisible');
                 floatingBtn.classList.add('opacity-100', 'translate-y-0');
             } else {
                 floatingBtn.classList.remove('opacity-100', 'translate-y-0');
                 floatingBtn.classList.add('opacity-0', 'translate-y-10', 'invisible');
-            }
-        });
-
-        // Ініціалізація поля Телефону + Виключення RU/BY + Автовизначення IP (GeoJS)
-        const phoneInput = document.getElementById("userPhone");
-        const iti = window.intlTelInput(phoneInput, {
-            initialCountry: "auto",
-            excludeCountries: ["ru", "by"], // Виключаємо РФ та РБ
-            geoIpLookup: function(callback) {
-                fetch("https://get.geojs.io/v1/ip/country.json")
-                    .then(res => res.json())
-                    .then(data => callback(data.country))
-                    .catch(() => callback("ua")); // Фоллбек на Україну
-            },
-            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/utils.js"
-        });
-
-        // UTM Парсер
-        function getUTMs() {
-            const params = new URLSearchParams(window.location.search);
-            return {
-                source: params.get('utm_source') || '',
-                medium: params.get('utm_medium') || '',
-                campaign: params.get('utm_campaign') || '',
-                content: params.get('utm_content') || '',
-                term: params.get('utm_term') || ''
-            };
-        }
-
-        // Логіка відправки форми
-        document.getElementById('leadForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const nameInput = document.getElementById('userName');
-            const tgInput = document.getElementById('userTelegram');
-            const nameError = document.getElementById('nameError');
-            const phoneError = document.getElementById('phoneError');
-            const submitBtn = document.getElementById('submitBtn');
-            const btnText = document.getElementById('btnText');
-            const btnLoader = document.getElementById('btnLoader');
-
-            // Скидання помилок
-            nameError.classList.add('hidden');
-            phoneError.classList.add('hidden');
-            nameInput.classList.remove('border-red-500');
-            phoneInput.classList.remove('border-red-500');
-
-            let isValid = true;
-
-            // Валідація імені (без цифр)
-            const nameRegex = /^[^0-9]+$/;
-            if (!nameRegex.test(nameInput.value.trim())) {
-                nameError.classList.remove('hidden');
-                nameInput.classList.add('border-red-500');
-                isValid = false;
-            }
-
-            // Валідація телефону
-            if (!iti.isValidNumber()) {
-                phoneError.classList.remove('hidden');
-                phoneInput.classList.add('border-red-500');
-                isValid = false;
-            }
-
-            if (!isValid) return;
-
-            // Збираємо дані
-            const utms = getUTMs();
-            const formData = {
-                name: nameInput.value.trim(),
-                phone: iti.getNumber(),
-                telegram: tgInput.value.trim(),
-                ...utms
-            };
-
-            // Блокуємо кнопку
-            submitBtn.disabled = true;
-            submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
-            btnText.innerText = 'ВІДПРАВКА...';
-            btnLoader.classList.remove('hidden');
-
-            try {
-                // Відправка в Google Таблицю
-                const response = await fetch(GOOGLE_SCRIPT_URL, {
-                    method: 'POST',
-                    mode: 'no-cors', // Важливо для Google Scripts
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData)
-                });
-
-                // Редирект на сторінку подяки (передаємо UTM мітки далі)
-                window.location.href = 'thanks.html' + window.location.search;
-
-            } catch (error) {
-                console.error('Помилка:', error);
-                alert('Сталася помилка при відправці. Спробуйте ще раз.');
-                
-                // Розблоковуємо кнопку
-                submitBtn.disabled = false;
-                submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
-                btnText.innerText = 'ОТРИМАТИ ДОСТУП';
-                btnLoader.classList.add('hidden');
             }
         });
     </script>
